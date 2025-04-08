@@ -17,8 +17,8 @@ import * as process from 'process';
       type: 'postgres',
       url: process.env.DATABASE_URL,
       ssl: {
-        rejectUnauthorized: false,
-      },
+          rejectUnauthorized: false,
+        },
       autoLoadEntities: true,
       synchronize: true
     }),

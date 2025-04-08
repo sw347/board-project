@@ -13,6 +13,7 @@ const app_service_1 = require("./app.service");
 const typeorm_1 = require("@nestjs/typeorm");
 const board_module_1 = require("./board/board.module");
 const config_1 = require("@nestjs/config");
+const process = require("process");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -25,7 +26,7 @@ exports.AppModule = AppModule = __decorate([
             }),
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'postgres',
-                url: 'postgresql://postgres.djudseytgirkwquzuzdj:9qf%262GE%236tAuiun@aws-0-ap-northeast-2.pooler.supabase.com:5432/postgres',
+                url: process.env.DATABASE_URL,
                 ssl: {
                     rejectUnauthorized: false,
                 },
