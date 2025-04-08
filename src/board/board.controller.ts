@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Options } from '@nestjs/common';
 import { BoardService } from './board.service';
 import { CreateBoardDto } from './dto/create-board.dto';
 
@@ -24,5 +24,12 @@ export class BoardController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.boardService.delete(id);
+  }
+
+  @Options()
+  handleOptions() {
+    return {
+      statusCode: 204,
+    };
   }
 }
