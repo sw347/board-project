@@ -6,9 +6,6 @@ export class Board {
   id: number;
 
   @Column()
-  name: string;
-
-  @Column()
   title: string;
 
   @Column()
