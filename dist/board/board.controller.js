@@ -33,6 +33,11 @@ let BoardController = class BoardController {
     remove(id) {
         return this.boardService.delete(id);
     }
+    handleOptions() {
+        return {
+            statusCode: 204,
+        };
+    }
 };
 exports.BoardController = BoardController;
 __decorate([
@@ -62,6 +67,12 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], BoardController.prototype, "remove", null);
+__decorate([
+    (0, common_1.Options)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], BoardController.prototype, "handleOptions", null);
 exports.BoardController = BoardController = __decorate([
     (0, common_1.Controller)('board'),
     __metadata("design:paramtypes", [board_service_1.BoardService])

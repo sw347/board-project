@@ -7,4 +7,7 @@ export declare class BoardController {
     findAll(): Promise<import("./entities/board.entity").Board[]>;
     findOne(id: string): Promise<import("./entities/board.entity").Board | null>;
     remove(id: string): Promise<import("typeorm").DeleteResult>;
+    handleOptions(): {
+        statusCode: number;
+    };
 }
